@@ -8,9 +8,9 @@ from cocos.director import director
 width = 1366
 height = 768
 
-class BlueLayer(cocos.layer.Layer):
+class GameLayer(cocos.layer.Layer):
     def __init__(self):
-        super(BlueLayer, self).__init__()
+        super(GameLayer, self).__init__()
         background = ColorLayer(128, 46, 101, 255)
         self.add(background, z = 0)
 
@@ -18,7 +18,7 @@ def main():
     director.init( width=width, height=height, resizable=False, fullscreen=True )
     director.window.set_caption('aspect ratio and fullscreen - see console for usage')
     scene = cocos.scene.Scene()
-    scene.add(BlueLayer())
+    scene.add(GameLayer())
     director.run( scene )
 
 if __name__ == '__main__':
